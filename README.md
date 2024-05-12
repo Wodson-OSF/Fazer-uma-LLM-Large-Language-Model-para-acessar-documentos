@@ -86,6 +86,7 @@ def gerar_e_buscar_consulta(consulta, base, model):
   Esta função recebe uma consulta, um dataframe contendo embeddings de documentos e um modelo de geração de texto.
   Ela gera um embedding para a consulta utilizando o modelo e então calcula a similaridade entre o embedding da consulta e os embeddings dos documentos no dataframe.
   Por fim, retorna o conteúdo do documento mais similar à consulta.
+  #trade-off(troca):maior segurança na busca da informação, já que a busca é feita dentro do sistema de biblioteca que você montou. RAG - combinar IA com a base de conhecimento que você e/ou alimentou na sua base. 
 
   Argumentos:
     consulta: A string contendo a consulta a ser realizada.
@@ -121,7 +122,8 @@ print(trecho)
 
 # Configurações de geração de texto
 generation_config = {
-  "temperature": 0,
+#temperatura pode ser mudada e demanda a liguagem das resposta.
+  "temperature": 0, 
   "candidate_count": 1
 }
 
